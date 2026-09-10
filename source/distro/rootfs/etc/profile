@@ -1,0 +1,9 @@
+export HOME=/drive/home
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/drive/bin:$PATH
+cd $HOME
+
+if ! busybox mount | busybox grep -q "/drive"; then
+    cd /
+    /bin/flosh noimsurelynota-etc-profile-ipromiseplsmountflashuserohsorryidontwanttomountitmyself
+    cd $HOME
+fi
